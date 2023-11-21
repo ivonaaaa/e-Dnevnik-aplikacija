@@ -25,15 +25,15 @@
             </div>
             <div class="header-right">
                 <div class="image-container">
-                    <img src="C:\Users\ivona\OneDrive\Desktop\eDnevnik\slike\profilna_slika.webp" alt="profilna_slika">
+                    <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
                     <div class="hover-content">
                         <div class="box">
                             <p>AAI adresa učenika</p>
                         </div>
                         <div class="additional-text">
                             <!-- slika je botun za odjavu tj. povratak na steanicu prijave (to treba dodati) -->
-                            <img src="C:\Users\ivona\OneDrive\Desktop\eDnevnik\slike\odjava.png" alt="odjava">
-                            <p>Odjavi se</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKG3_EysbEAX8t62fXVU9MXMD6v6NUgwY93g&usqp=CAU" 
+                            onclick="odjava()" alt="odjava"> 
                         </div>
                     </div>
                 </div>
@@ -43,18 +43,18 @@
 
     <!-- Odabir stranica -->
     <section class="button">
-        <button id="grades-button">Ocjene</button>
-        <button id="exams-button">Ispiti</button>
-        <button id="absences-button">Izostanci</button>
-        <button id="personal-data-button">Osobni podaci</button>
-        <button id="notes-button">Bilješke razrednika</button>
+        <button id="grades-button" onclick="ocjene()">Ocjene</button>
+        <button id="exams-button" onclick="ispiti()" >Ispiti</button>
+        <button id="absences-button" onclick="izostanci()" >Izostanci</button>
+        <button id="personal-data-button" onclick="podaci()">Osobni podaci</button>
+        <button id="notes-button" onclick="biljeske()">Bilješke razrednika</button>
     </section>
 
     <!-- Predmeti -->
     <!-- ode bi trebalo dodavat predmete po bazi podataka?? -->
     <section class="subjects">
         <h2>Pregled ocjena</h2>
-        <button class="subject-button" id="subject1-button">Subject 1</button>
+        <button class="subject-button" id="subject1-button" onclick="predmet()">Subject 1</button>
         <button class="subject-button" id="subject2-button">Subject 2</button>
         <button class="subject-button" id="subject3-button">Subject 3</button>
         <button class="subject-button" id="subject4-button">Subject 4</button>
