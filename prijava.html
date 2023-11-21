@@ -25,15 +25,15 @@
             <form action="#">
                 <div class="input-box">
                     <label>Korisničko ime</label>
-                    <input type="email" required>
+                    <input type="email" id="email" required>
                 </div>
                 <div class="input-box">
                     <!--<span class="icon"></span>-->
                     <label>Lozinka</label>
-                    <input type="password" required>
+                    <input type="password" id="password" required>
                 </div>
                 <!-- Botun za prijavu -->
-                <button type="submit" class="btn">Prijavi se</button>
+                <button type="submit" onclick="event.preventDefault(); naslovna();" class="btn">Prijavi se</button>
             </form>
 
         </div>

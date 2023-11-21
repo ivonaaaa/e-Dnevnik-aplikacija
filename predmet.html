@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Dnevnik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="stylesheet" href="predmet.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <p>Školska godina: 2023./2024.</p>
+                <p>Razrednik: Ime Prezime</p>
+            </div>
+            <div class="header-center">
+                <h2 class="logo">e-Dnevnik</h2>
+            </div>
+            <div class="header-right">
+                <div class="image-container">
+                    <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
+                    <div class="hover-content">
+                        <div class="box">
+                            <p>AAI adresa učenika</p>
+                        </div>
+                        <div class="additional-text">
+                            <!-- slika je botun za odjavu tj. povratak na steanicu prijave (to treba dodati) -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKG3_EysbEAX8t62fXVU9MXMD6v6NUgwY93g&usqp=CAU"
+                                onclick="odjava()" alt="odjava">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <!-- Odabir stranica -->
+    <section class="button">
+        <button id="grades-button" onclick="ocjene()">Ocjene</button>
+        <button id="exams-button" onclick="ispiti()">Ispiti</button>
+        <button id="absences-button" onclick="izostanci()">Izostanci</button>
+        <button id="personal-data-button" onclick="podaci()">Osobni podaci</button>
+        <button id="notes-button" onclick="biljeske()">Bilješke razrednika</button>
+    </section>
+
+    <div id="predmet">
+        <h2>Naziv predmeta</h2>
+    </div>
+</body>
+
+</html>
