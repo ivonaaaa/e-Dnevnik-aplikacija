@@ -56,5 +56,32 @@
         <h2>Pregled ispita</h2>
     </div>
     
+    
+    <div class="exam-container">
+        <div class="controls">
+            <label for="months">Odaberi mjesec:</label>
+            <select id="months" onchange="showExams()">
+                <option value="0" disabled selected>Odaberite mjesec</option>
+                <option value="1">Siječanj</option>
+                <option value="2">Veljača</option>
+                <option value="3">Ožujak</option>
+                <option value="4">Travanj</option>
+                <option value="5">Svibanj</option>
+                <option value="6">Lipanj</option>
+                <option value="7">Srpanj</option>
+                <option value="8">Kolovoz</option>
+                <option value="9">Rujan</option>
+                <option value="10">Listopad</option>
+                <option value="11">Studeni</option>
+                <option value="12">Prosinac</option>
+            </select>
+            <button onclick="showExams('past')">Prošli</button>
+            <button onclick="showExams('current')">Tekući</button>
+            <button onclick="showExams('future')">Budući</button>
+        </div>
+        <div class="exams" id="exams-container">
+            <!-- Ispiti će se dinamički prikazati ovdje -->
+        </div>
+    </div>
 </body>
 </html>

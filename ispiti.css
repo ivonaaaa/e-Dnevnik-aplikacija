@@ -120,3 +120,72 @@ button:hover {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.pregled_ispita {
+    position: relative;
+}
+
+#mjesec {
+    padding: 10px;
+    font-size: 16px;
+}
+/* stilovi za stiliziranje izgleda dropdowna */
+#mjesec:focus {
+    outline: none;
+}
+
+#mjesec option {
+    padding: 10px;
+}
+
+.exam-container {
+    text-align: center;
+}
+
+.controls button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* prikaz ispita */
+.exams {
+    margin-top: 20px;
+}
+.exam-container {
+    text-align: center;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls label, .controls select, .controls button {
+    margin: 5px;
+}
+
+.controls select, .controls button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.exams {
+    margin-top: 20px;
+}
+
+.exams ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.exams li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+}
+
+.exams li:first-child {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
