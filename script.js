@@ -45,7 +45,7 @@ function biljeske() {
 function predmet() {
     window.location.href = 'predmet.html';
 }
-
+ //Primjer podataka za ispite
 const exams = [
     { name: 'Ispit 1', date: new Date('2023-10-10') },
     { name: 'Ispit 2', date: new Date('2023-11-20') },
@@ -104,5 +104,4 @@ function displayExams(exams) {
     examsContainer.appendChild(ul);
 }
 
-// Prikazi tekuće ispite kao zadane pri pokretanju
-showExams('current');
+
