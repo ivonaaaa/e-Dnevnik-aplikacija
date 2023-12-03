@@ -120,3 +120,46 @@ button:hover {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+
+
+  
+#izostanci_ {
+    margin: 20px;
+  }
+  
+.mjesec {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+  
+  
+.izostanci-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.izostanci-table th,
+.izostanci-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+  
+.opravdano {
+    color: #4CAF50;
+}
+  
+.neopravdano {
+    color: #FF0000;
+}
+  
+
+.naziv{
+    color: #3498db;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    font-size: 15px;
+}
