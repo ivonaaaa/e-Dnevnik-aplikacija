@@ -15,7 +15,6 @@ header {
 }
 
 .header-content {
-    max-width: 800px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -120,13 +119,6 @@ button:hover {
     margin-left: 10px;
     margin-right: 10px;
 }
-
-
-
-
-
-
-
   
 #biljeske_ {
     margin: 20px;
@@ -134,11 +126,10 @@ button:hover {
   
 .biljeska {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-
 }
   
 

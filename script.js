@@ -4,7 +4,6 @@ function ispravno(email) {
 }
 
 function naslovna() {
-    // Get values from input fields
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
@@ -45,7 +44,8 @@ function biljeske() {
 function predmet() {
     window.location.href = 'predmet.html';
 }
- //Primjer podataka za ispite
+
+//Primjer podataka za ispite
 const exams = [
     { name: 'Ispit 1', date: new Date('2023-10-10') },
     { name: 'Ispit 2', date: new Date('2023-11-20') },

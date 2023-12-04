@@ -15,7 +15,6 @@ header {
 }
 
 .header-content {
-    max-width: 800px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -119,4 +118,59 @@ button:hover {
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+/* generalno uređenje za (obje) tablice */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* uređenje za prvu tablicu (ocjene iz predmeta) */
+/* prvi redak */
+.tablica1 tr:first-child {
+    background-color: #5081a4;
+    color: #fff;
+}
+
+/* drugi, treći i deveti redak */
+.tablica1 tr:nth-child(2), .tablica1 tr:nth-child(3), .tablica1 tr:nth-child(9) {
+    background-color: #42a8ed;
+    color: #fff;
+}
+
+/* rubrika */
+.tablica1 tr:nth-child(n+4):nth-child(-n+8) {
+    background-color: #e6f0f3;
+}
+
+/* dodatno uređenje tj. promjene za drugu tablicu (bilješke uz ocjenu) */
+/* prvi redak */
+.tablica2 tr:first-child {
+    background-color: #5081a4;
+    color: #fff;
+}
+
+/* drugi redak */
+.tablica2 tr:nth-child(2) {
+    background-color: #42a8ed;
+    color: #fff;
+}
+
+/* treći redak i nadalje */
+.tablica2 tr:nth-child(n+3) {
+    background-color: #e6f0f3;
+}
+
+/* raširen drugi stupac */
+.tablica2 td:nth-child(2) {
+    width: 60%;
 }
