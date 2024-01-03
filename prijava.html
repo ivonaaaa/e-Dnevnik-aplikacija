@@ -9,9 +9,12 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <link rel="stylesheet" href="prijava.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
+    <script src="server.js" type="module" ></script>
     <script src="script.js"></script>
+    
 
     <!-- Header -->
     <header>
@@ -33,7 +36,8 @@
                     <input type="password" id="password" required>
                 </div>
                 <!-- Botun za prijavu -->
-                <button type="submit" onclick="event.preventDefault(); naslovna();" class="btn">Prijavi se</button>
+               <!-- <button type="submit" onclick="event.preventDefault(); naslovna();" class="btn">Prijavi se</button>-->
+                <button  type="submit" id="loginButton"  onclick="event.preventDefault(); prijava();" class="btn">Prijavi se</button>
             </form>
 
         </div>

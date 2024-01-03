@@ -9,8 +9,10 @@
             <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
         <link rel="stylesheet" href="ocjene.css">
+         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     </head>
 <body>
+    <script src="server.js" type="module" ></script>
     <script src="script.js"></script>
 
     <!-- Header -->
@@ -18,7 +20,7 @@
         <div class="header-content">
             <div class="header-left">
                 <p>Školska godina: 2023./2024.</p>
-                <p>Razrednik: Ime Prezime</p>
+                <p id="razrednik">Razrednik: <span id="imePrezimeRazrednika"></span></p>
             </div>
             <div class="header-center">
                 <h2 class="logo">e-Dnevnik</h2>
@@ -29,6 +31,7 @@
                     <div class="hover-content">
                         <div class="box">
                             <p>AAI adresa učenika</p>
+                            <p id="aaiAdresa"></p>
                         </div>
                         <div class="additional-text">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKG3_EysbEAX8t62fXVU9MXMD6v6NUgwY93g&usqp=CAU" 
@@ -53,8 +56,9 @@
     <section class="subjects">
         <h2>Pregled ocjena</h2>
         <!-- OVDJE DODAVATI PREDMETE -->
-        <button class="subject-button" id="subject1-button" onclick="predmet()">Subject 1</button>
+        <!--<button class="subject-button" id="subject1-button" onclick="predmet()">Subject 1</button>-->
     </section>
 
+    <script src="predmeti.js"></script>
 </body>
 </html>

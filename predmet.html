@@ -10,16 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <link rel="stylesheet" href="predmet.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
+    <script src="server.js" type="module" ></script>
     <script src="script.js"></script>
 
     <header>
         <div class="header-content">
             <div class="header-left">
                 <p>Školska godina: 2023./2024.</p>
-                <p>Razrednik: Ime Prezime</p>
+                <p id="razrednik">Razrednik: <span id="imePrezimeRazrednika"></span></p>
             </div>
             <div class="header-center">
                 <h2 class="logo">e-Dnevnik</h2>
@@ -30,6 +32,7 @@
                     <div class="hover-content">
                         <div class="box">
                             <p>AAI adresa učenika</p>
+                            <p id="aaiAdresa"></p>
                         </div>
                         <div class="additional-text">
                             <!-- slika je botun za odjavu tj. povratak na steanicu prijave (to treba dodati) -->
@@ -51,12 +54,12 @@
     </section>
 
     <div id="predmet">
-        <h2>Naziv predmeta</h2>
+        <h2 id="nazivPredmeta"></h2>
     </div>
 
-    <!-- RUBRIKA OCJENA -->
-    <div class="tablica1">
-        <table>
+     <!-- RUBRIKA OCJENA -->
+     <div class="tablica1">
+        <table id="ocjeneTablica">
             <!-- prvi redak -->
             <tr>
                 <th colspan="11">OCJENE PREDMETA</th>
@@ -67,89 +70,89 @@
                 <td colspan="10">MJESEC</td>
             </tr>
             <tr>
-                <td>9.</td>
-                <td>10.</td>
-                <td>11.</td>
-                <td>12.</td>
-                <td>1.</td>
-                <td>2.</td>
-                <td>3.</td>
-                <td>4.</td>
-                <td>5.</td>
-                <td>6.</td>
+                <td id="mjesec9">9.</td>
+                <td id="mjesec10">10.</td>
+                <td id="mjesec11">11.</td>
+                <td id="mjesec12">12.</td>
+                <td id="mjesec1">1.</td>
+                <td id="mjesec2">2.</td>
+                <td id="mjesec3">3.</td>
+                <td id="mjesec4">4.</td>
+                <td id="mjesec5">5.</td>
+                <td id="mjesec6">6.</td>
 
             <!-- Nadalje je rubrika... -->
             </tr>
                 <td>TEORIJA</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="teorija9"></td>
+                <td id="teorija10"></td>
+                <td id="teorija11"></td>
+                <td id="teorija12"></td>
+                <td id="teorija1"></td>
+                <td id="teorija2"></td>
+                <td id="teorija3"></td>
+                <td id="teorija4"></td>
+                <td id="teorija5"></td>
+                <td id="teorija6"></td>
             </tr>
             </tr>
                 <td>ZADATCI</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="zadatci9"></td>
+                <td id="zadatci10"></td>
+                <td id="zadatci11"></td>
+                <td id="zadatci12"></td>
+                <td id="zadatci1"></td>
+                <td id="zadatci2"></td>
+                <td id="zadatci3"></td>
+                <td id="zadatci4"></td>
+                <td id="zadatci5"></td>
+                <td id="zadatci6"></td>
             </tr>
             </tr>
                 <td>RAZUMIJEVANJE</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="razumijevanje9"></td>
+                <td id="razumijevanje10"></td>
+                <td id="razumijevanje11"></td>
+                <td id="razumijevanje12"></td>
+                <td id="razumijevanje1"></td>
+                <td id="razumijevanje2"></td>
+                <td id="razumijevanje3"></td>
+                <td id="razumijevanje4"></td>
+                <td id="razumijevanje5"></td>
+                <td id="razumijevanje6"></td>
             </tr>
             </tr>
                 <td>AKTIVNOST</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="aktivnost9"></td>
+                <td id="aktivnost10"></td>
+                <td id="aktivnost11"></td>
+                <td id="aktivnost12"></td>
+                <td id="aktivnost1"></td>
+                <td id="aktivnost2"></td>
+                <td id="aktivnost3"></td>
+                <td id="aktivnost4"></td>
+                <td id="aktivnost5"></td>
+                <td id="aktivnost6"></td>
             </tr>
             </tr>
                 <td>DOMAĆI RAD</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="domaci9"></td>
+                <td id="domaci10"></td>
+                <td id="domaci11"></td>
+                <td id="domaci12"></td>
+                <td id="domaci1"></td>
+                <td id="domaci2"></td>
+                <td id="domaci3"></td>
+                <td id="domaci4"></td>
+                <td id="domaci5"></td>
+                <td id="domaci6"></td>
             </tr>
 
 
             <!-- redak za zaključnu ocjenu -->
             <tr>
-                <td>ZAKLJUČENO:</td>
-                <td colspan="10"></td>
+                <td >ZAKLJUČENO:</td>
+                <td colspan="10" id="zakljucna"></td>
             </tr>
         </table>
     </div>
@@ -157,25 +160,22 @@
 
     <!-- BILJEŠKE UZ OCJENU -->
     <div class="tablica2">
-        <table>
+        <table id="tablica" class="tab">
             <tr>
                 <th colspan="3">BILJEŠKE UZ OCJENE</th>
             </tr>
             <!-- drugi redak -->
             <tr>
-                <td>DATUM</td>
-                <td>BILJEŠKA</td>
-                <td>OCJENA</td>
+                <td >DATUM</td>
+                <td >BILJEŠKA</td>
+                <td >OCJENA</td>
             </tr>
+            
             <!-- OVDJE ĆE IĆI SVE BILJEŠKE IZ BAZE PODATAKA -->
-            <tr>
-                <td>07.12.2023.</td>
-                <td>Učenik je odgovarao usmeno gradivo "Drugi svjetski rat"</td>
-                <td>5</td>
-            </tr>
+            
         </table>
     </div>
-
+    <script src="ocjene.js"></script>
 
 </body>
 </html>
