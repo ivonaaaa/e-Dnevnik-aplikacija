@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <script src="server.js" type="module" ></script>
+    <script src="server.js" type="module"></script>
     <script src="script.js"></script>
 
 
@@ -37,7 +37,7 @@
                         </div>
                         <div class="additional-text">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKG3_EysbEAX8t62fXVU9MXMD6v6NUgwY93g&usqp=CAU"
-                            onclick="odjava()" alt="odjava"> 
+                                onclick="odjava()" alt="odjava">
                         </div>
                     </div>
                 </div>
@@ -48,8 +48,8 @@
     <!-- Odabir stranica -->
     <section class="button">
         <button id="grades-button" onclick="ocjene()">Ocjene</button>
-        <button id="exams-button" onclick="ispiti()" >Ispiti</button>
-        <button id="absences-button" onclick="izostanci()" >Izostanci</button>
+        <button id="exams-button" onclick="ispiti()">Ispiti</button>
+        <button id="absences-button" onclick="izostanci()">Izostanci</button>
         <button id="personal-data-button" onclick="podaci()">Osobni podaci</button>
         <button id="notes-button" onclick="biljeske()">Bilješke razrednika</button>
     </section>
@@ -57,32 +57,34 @@
     <div id="ispit">
         <h2>Pregled ispita</h2>
     </div>
-    
-    <div class="exam-container">
-        <div class="controls">
-            
-            <select id="months" onchange="showExams()">
-                <option value="0" disabled selected>Odaberite mjesec</option>
-                <option value="1">Siječanj</option>
-                <option value="2">Veljača</option>
-                <option value="3">Ožujak</option>
-                <option value="4">Travanj</option>
-                <option value="5">Svibanj</option>
-                <option value="6">Lipanj</option>
-                <option value="7">Srpanj</option>
-                <option value="8">Kolovoz</option>
-                <option value="9">Rujan</option>
-                <option value="10">Listopad</option>
-                <option value="11">Studeni</option>
-                <option value="12">Prosinac</option>
-            </select>
-            <button onclick="showExams('past')">Prošli</button>
-            <button onclick="showExams('current')">Tekući</button>
-            <button onclick="showExams('future')">Budući</button>
-        </div>
-        <div class="exams" id="exams-container">
-            <!-- Ispiti će se dinamički prikazati ovdje -->
-        </div>
+    <select id="mjeseci" onchange="updateData()">
+        <option value="" selected>Odaberite mjesec</option>
+        <option value="Siječanj">Siječanj</option>
+        <option value="Veljača">Veljača</option>
+        <option value="Ožujak">Ožujak</option>
+        <option value="Travanj">Travanj</option>
+        <option value="Svibanj">Svibanj</option>
+        <option value="Lipanj">Lipanj</option>
+        <option value="Srpanj">Srpanj</option>
+        <option value="Kolovoz">Kolovoz</option>
+        <option value="Rujan">Rujan</option>
+        <option value="Listopad">Listopad</option>
+        <option value="Studeni">Studeni</option>
+        <option value="Prosinac">Prosinac</option>
+    </select>
+
+    <div id="exam-container">
+        <!-- Ispiti će se dinamički prikazati ovdje -->
+        <table id="ispitiTablica">
+            <tr>
+                <td id="mjesec"></td>
+                <td id="datum"></td>
+                <td id="predmet"></td>
+                <td id="biljeska"></td>
+            </tr>
+        </table>
     </div>
+    <script src="ispiti.js"></script>
 </body>
+
 </html>

@@ -125,30 +125,22 @@ button:hover {
 }
   
 .mjesec {
-    text-align: center;
-    margin-bottom: 20px;
-    
+    text-align: center;    
 }
   
 .izostanci-table {
+    display: flex;
+    justify-content: center;
     width: 100%;
     border-collapse: collapse;
 }
- 
+
 .izostanci-table th,
 .izostanci-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
     width: 25%;
-}
-
-.opravdano {
-    color: #4CAF50;
-}
-
-.neopravdano {
-    color: #FF0000;
 }
 
 .naziv{
