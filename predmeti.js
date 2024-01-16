@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         button.textContent = nazivPredmeta;
                         button.className = 'subject-button';
                         button.onclick = function() {
-                            // Prenesi naziv predmeta i otvori "predmeti.html"
+                            // Spremi odabrani predmet u local storage
+                            localStorage.setItem('selectedSubject', nazivPredmeta);
+                            // Prenesi naziv predmeta i otvori "predmet.html"
                             window.location.href = 'predmet.html';
                         };
 
@@ -33,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         xhr.send();
     } else {
-        
         console.error('Element s klasom "subjects" nije pronađen.');
     }
 });

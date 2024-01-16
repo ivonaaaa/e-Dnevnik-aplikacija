@@ -26,6 +26,9 @@ db.once('open', function () {
   console.log('Spojeni smo na MongoDB bazu ');
 });
 
+app.get('/', (req, res) => {
+  res.send('Dobrodošli na e-Dnevnik!!');
+});
 
 //Sheme
 //za ucenike-u bazi osobni_podaci
@@ -170,14 +173,76 @@ app.get('/profesori', async (req, res) => {
   }
 });
 
+//Za biljeske razrednika
+const biljShema =new Schema ({
+  biljeska_razrednika: String,
+  izvanskolske_aktivnosti: String
+});
 
+const Biljeska=mongoose.model("Biljeska", biljShema, 'biljeske_na_izbornoj_traci');
 
+app.get('/biljeske_na_izbornoj_traci/', async (req, res) => {
+  try{
+    const sve=await Biljeska.find();
+    res.json(sve);
+  }catch(error) {
+    res.status(500).send(error.message);
+  }
+})
+
+//Za izostanke
+const izostanciShema=new Schema ({
+  datum: String,
+  sat: Number,
+  predmet: String,
+  status: String,
+  razlog: String
+});
+
+const Izostanci=mongoose.model("Izostanci", izostanciShema, 'izostanci');
+
+app.get('/izostanci/', async (req, res) => {
+  try{
+    const sviIzostanci=await Izostanci.find();
+    res.json(sviIzostanci);
+  }catch(error) {
+    res.status(500).send(error.message);
+  }
+})
+
+//Za ispite
+const ispitiShema =new Schema ({
+  mjesec: String,
+  predmet: String,
+  biljeska: String,
+  datum: String
+});
+
+const Ispiti=mongoose.model("Ispiti", ispitiShema, 'ispiti');
+
+app.get('/ispiti/', async (req, res) => {
+  try{
+    const sviIspiti=await Ispiti.find();
+    res.json(sviIspiti);
+  }catch(error) {
+    res.status(500).send(error.message);
+  }
+})
+
+app.get('/ispiti/:month', async (req, res) => {
+  const selectedMonth = req.params.month;
+  try {
+      // Fetch data from MongoDB based on the selected month
+      const sviIspiti = await Ispiti.find({ mjesec: selectedMonth });
+      res.json(sviIspiti);
+  } catch (error) {
+      res.status(500).send(error.message);
+  }
+});
 
 app.listen(port, () => {
   console.log(`Server je pokrenut na http://localhost:${port}`);
 });
-
-
 
 //za provjeru prijave 
 const bodyParser = require('body-parser');
