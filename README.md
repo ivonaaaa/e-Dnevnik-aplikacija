@@ -1,0 +1,1 @@
+Opis: Full stack aplikacija bazirana na ideji prototipa e-Dnevnika. Korišteni su HTML, CSS, JavaScript, React i MongoDB. Aplikacija iz baze dohvaća podatke koji predstavljaju osobe s određenim ocjenama i bilješkama.
